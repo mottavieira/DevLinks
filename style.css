@@ -21,7 +21,7 @@
   --surface-color: rgba(0, 0, 0, 0, 0.05);
   --surface-color-hover: rgba(0, 0, 0, 0, 0.02);
   --highlight-color: rgba(0, 0, 0, 0.1);
-  --switch-bg-url: url(./assets/sun.svg)
+  --switch-bg-url: url(./assets/sun.svg);
 }
 
 body {
@@ -32,6 +32,7 @@ body {
 
   /*background: color image repeat position/size*/
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 body * {
@@ -152,11 +153,22 @@ ul li a:hover {
 }
 
 #social-links a:hover {
-  background: var(--highlight-color)
+  background: var(--highlight-color);
 }
 
 footer {
   padding: 24px 0;
   text-align: center;
   font-size: 14px;
+}
+
+/* media queries */
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./assets/bg-desktop.jpg);
+  }
+
+  .light {
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+  }
 }
